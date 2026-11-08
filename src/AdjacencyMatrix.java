@@ -19,8 +19,8 @@ public class AdjacencyMatrix {
             if (!vertices.contains(to)) {
                 vertices.add(to);
             }
-            if (!vertices.contains(to)) {
-                vertices.add(to);
+            if (!vertices.contains(from)) {
+                vertices.add(from);
             }
         }
         input.close();
@@ -36,6 +36,8 @@ public class AdjacencyMatrix {
 
             int fromIndex = vertices.indexOf(from);
             int toIndex = vertices.indexOf(to);
+            System.out.println("From: " + from + " Index: " + fromIndex);
+            System.out.println("To: " + to + " Index: " + toIndex);
 
             graph[fromIndex][toIndex] = weight;
             graph[toIndex][fromIndex] = weight;
@@ -58,5 +60,11 @@ public class AdjacencyMatrix {
             System.out.println();
 
         }
+    }
+    public ArrayList<String> getVertices() {
+        return vertices;
+    }
+    public float[][] getGraph() {
+        return graph;
     }
 }

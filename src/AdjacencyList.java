@@ -47,4 +47,11 @@ public class AdjacencyList {
             System.out.println();
         }
     }
+
+    public ArrayList<String> getVertices() {
+        return vertices;
+    }
+    public ArrayList<ArrayList<Node>> getGraph() {
+        return graph;
+    }
 }
